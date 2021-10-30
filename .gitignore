@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+.python-version
+
+# Translations
+*.pot
+*.mo
+
+# Django stuff:
+*.log
+app/config/settings/local_settings.py
+app/config/settings/local.py
+
+# dotenv
+.env
+.DS_Store
+
+#editors
+**/.vscode
+**/.idea
+
+#provision
+provision/*.retry
+provision/private_keys
+
+# manual deploy
+deploy
+
+#uploaded files
+app/static/files
+
+#debug tool bar static files
+app/static/debug_toolbar
+
+#rest framework static files
+app/static/rest_framework
+
+#jupyter
+*.ipynb
+
+# covearge
+.coverage
+.coverage.*
+htmlcov/
+
+#virutalenv
+venv
