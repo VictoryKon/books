@@ -8,24 +8,36 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Book',
+            name="Book",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('release', models.DateTimeField()),
-                ('writer', models.CharField(default='', max_length=100)),
-                ('name', models.CharField(blank=True, default='', max_length=100)),
-                ('genre', models.CharField(default='', max_length=100)),
-                ('synopsis', models.TextField()),
-                ('price', models.PositiveIntegerField(validators=[django.core.validators.MaxValueValidator(1000000)])),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("created", models.DateTimeField(auto_now_add=True)),
+                ("release", models.DateTimeField()),
+                ("writer", models.CharField(default="", max_length=100)),
+                ("name", models.CharField(blank=True, default="", max_length=100)),
+                ("genre", models.CharField(default="", max_length=100)),
+                ("synopsis", models.TextField()),
+                (
+                    "price",
+                    models.PositiveIntegerField(
+                        validators=[django.core.validators.MaxValueValidator(1000000)]
+                    ),
+                ),
             ],
             options={
-                'ordering': ['name'],
+                "ordering": ["name"],
             },
         ),
     ]

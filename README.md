@@ -7,16 +7,17 @@ The project is in implementation of a simpliest api that allows to create, list 
 First thing first, you need to clone the git repository.
 
 ### Virtual environment 
-Ensure that you have python version >= 3.6 installed and run in the project root folder:
 
+Ensure that you have python version >= 3.6 installed and run in the project root folder:
 ```
 python -m venv env
 ``` 
-Activate the virtual environment
 
+Activate the virtual environment
 ```
 source env/bin/activate
 ``` 
+
 ### Install dependencies
 
 Run this command from the project root
@@ -26,13 +27,12 @@ pip install -r requirements.txt
 
 ### Start working with the database
 
-Make migrations: run this command from the project root
-
+Make migrations: run this command from the project roo
 ```
 python manage.py makemigrations books
 ```
-After you've created migrations, apply them
 
+After you've created migrations, apply them
 ```
 python manage.py migrate
 ```
@@ -49,4 +49,12 @@ In order to start running server locally, run:
 ```
 python manage.py runserver
 ```
+
 The api will be available at: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+### Style checks
+
+Before creating the pull request, check the code style with black in the project root folder:
+```
+black .
+```
